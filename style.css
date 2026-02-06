@@ -1349,7 +1349,7 @@ section {
 
 .final-cta-note {
     font-size: 0.95rem;
-    opacity: 0.9;
+    opacity: 0.1;
     font-style: italic;
 }
 
@@ -1435,6 +1435,7 @@ section {
         padding: 1rem 2rem;
         font-size: 1.1rem;
         min-height: 48px; /* Touch target size */
+        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
     }
 
     .reason-card,
@@ -1442,11 +1443,13 @@ section {
     .testimonial-card {
         padding: 1rem;
         margin-bottom: 1rem;
+        box-shadow: none;
     }
 
     .pricing-card {
         padding: 1.5rem;
         margin: 0 0.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     .pricing-amount {
@@ -1474,6 +1477,27 @@ section {
 
     .orbital-icons {
         display: none; /* Hide orbital icons on small screens */
+    }
+
+    /* Adapt shadows for mobile */
+    .plush-float {
+        filter: drop-shadow(0 20px 40px rgba(255, 20, 147, 0.4));
+    }
+
+    .reason-card:hover {
+        box-shadow: none;
+    }
+
+    .benefit-card:hover {
+        box-shadow: none;
+    }
+
+    .testimonial-card:hover {
+        box-shadow: none;
+    }
+
+    .reassurance-item:hover .reassurance-icon {
+        filter: drop-shadow(0 3px 6px rgba(255, 20, 147, 0.2));
     }
 }
 
