@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doudou Cœur - La peluche qui exprime vos sentiments, sans un mot</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Preload critical fonts for better performance -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v35/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDNt3i3.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/lora/v32/0QI6MX1D_JOuMw_hLdO6T2wV9KnW-MoFkofpNk.woff2" as="font" type="font/woff2" crossorigin>
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,7 +36,7 @@
     <!-- SECTION 2: POURQUOI OFFRIR -->
     <section class="why-offer">
         <div class="container">
-            <h2 class="section-title">Pourquoi offrir Doudou Cœur ?</h2>
+            <h2 class="section-title" data-text="Pourquoi offrir Doudou Cœur ?">Pourquoi offrir Doudou Cœur ?</h2>
             <p class="section-intro">Parce que certains sentiments ne s'expriment pas avec des mots.</p>
             
             <div class="reasons-grid">
@@ -55,10 +64,10 @@
         <div class="container">
             <div class="presentation-grid">
                 <div class="presentation-image">
-                    <img src="mon doudou.png" alt="Doudou Cœur dans une ambiance douce" class="ambiance-img">
+                    <img src="mon doudou.png" alt="Doudou Cœur dans une ambiance douce" class="ambiance-img" loading="lazy">
                 </div>
                 <div class="presentation-content">
-                    <h2 class="section-title">Rencontrez Doudou Cœur</h2>
+                    <h2 class="section-title" data-text="Rencontrez Doudou Cœur">Rencontrez Doudou Cœur</h2>
                     <p class="presentation-text">
                         Un compagnon tout doux, pensé pour ceux qui aiment sans compter. 
                         Sa matière veloutée invite aux câlins, son cœur rouge bat au rythme de vos sentiments.
@@ -93,7 +102,7 @@
     <!-- SECTION 4: VALEUR ÉMOTIONNELLE / BÉNÉFICES -->
     <section class="emotional-value">
         <div class="container">
-            <h2 class="section-title">Plus qu'une peluche, un messager d'émotions</h2>
+            <h2 class="section-title" data-text="Plus qu'une peluche, un messager d'émotions">Plus qu'une peluche, un messager d'émotions</h2>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
@@ -119,15 +128,15 @@
     <!-- SECTION 5: PRIX & OFFRE -->
     <section class="pricing" id="offre">
         <div class="container">
-            <h2 class="section-title">Offre Saint-Valentin</h2>
-           
+            <h2 class="section-title" data-text="Offre Saint-Valentin">Offre Saint-Valentin</h2>
+            <p class="pricing-intro">Un prix doux pour un cadeau qui n'a pas de prix.</p>
             
             <div class="pricing-card">
-                <img src="mon doudou.png" alt="Doudou Cœur" size="150x150px" class="pricing-badge-img">
+                <div class="pricing-badge">Édition Limitée</div>
                 <h3 class="pricing-product">Doudou Cœur</h3>
                 <div class="pricing-amount">
-                    
-                    <span class="price-current">15 000 FCFA</span>
+                    <span class="price-old">49,99€</span>
+                    <span class="price-current">34,99€</span>
                 </div>
                 <p class="pricing-detail">Livraison offerte avant la Saint-Valentin</p>
                 
@@ -175,7 +184,7 @@
     <!-- SECTION 7: AVIS -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Ils ont fait sourire leurs proches</h2>
+            <h2 class="section-title" data-text="Ils ont fait sourire leurs proches">Ils ont fait sourire leurs proches</h2>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
@@ -219,5 +228,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
