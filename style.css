@@ -51,20 +51,30 @@ body {
     --mouse-y: 50%;
 }
 
-/* Cursor personnalisé */
-body::before {
-    content: '♥';
-    position: fixed;
-    font-size: 2rem;
-    color: var(--rose-vif);
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    animation: cursorPulse 1s ease-in-out infinite;
-    left: var(--mouse-x);
-    top: var(--mouse-y);
-    transform: translate(-50%, -50%);
-    transition: left 0.05s ease, top 0.05s ease;
+/* Cursor personnalisé - Adaptable aux appareils */
+@media (hover: hover) and (pointer: fine) {
+    /* Desktop avec souris */
+    body::before {
+        content: '♥';
+        position: fixed;
+        font-size: 2rem;
+        color: var(--rose-vif);
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: difference;
+        animation: cursorPulse 1s ease-in-out infinite;
+        left: var(--mouse-x);
+        top: var(--mouse-y);
+        transform: translate(-50%, -50%);
+        transition: left 0s ease, top 0s ease;
+    }
+}
+
+@media (hover: none) or (pointer: coarse) {
+    /* Mobile/Tablette sans souris */
+    body::before {
+        display: none;
+    }
 }
 
 @keyframes cursorPulse {
