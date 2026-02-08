@@ -189,7 +189,7 @@ h1, h2, h3, h4 {
     margin-bottom: var(--spacing-md);
     font-weight: 900;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--rouge-passion) 0%, var(--rose-vif) 100%);
+    background: linear-gradient(135deg, var(--rouge-passion) 100%, var(--rose-vif) 0%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
