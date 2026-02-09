@@ -309,7 +309,7 @@ section {
     width: 200%;
     height: 200%;
     background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.3) 50%, transparent 60%);
-    animation: shimmerCTA 3s linear infinite;
+    /* animation: shimmerCTA 3s linear infinite; */
 }
 
 @keyframes shimmerCTA {
@@ -394,7 +394,7 @@ section {
    ======================================== */
 .hero {
     min-height: 100vh;
-    background: #0a0a0a;
+    background: #000000;
     display: flex;
     align-items: center;
     padding: 0;
@@ -710,7 +710,7 @@ section {
 }
 
 .why-offer .section-title {
-    color: var(--blanc);
+    color: var(--blanc-casse);
     background: linear-gradient(135deg, var(--blanc) 0%, var(--rose-vif) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1189,7 +1189,7 @@ section {
 }
 
 .pricing-detail {
-    color: var(--rose-vif);
+    color: var(--blanc);
     font-weight: 600;
     margin-bottom: var(--spacing-md);
     font-size: 1.05rem;
@@ -1267,6 +1267,7 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
+    
 }
 
 .reassurance-item {
@@ -1279,6 +1280,7 @@ section {
     align-items: center;
     justify-content: center;
     min-height: 180px;
+    
 }
 
 .reassurance-item:hover {
@@ -1792,7 +1794,7 @@ section {
     }
     
     .reassurance-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
     section {
