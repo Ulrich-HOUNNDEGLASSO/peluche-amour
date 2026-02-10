@@ -1234,46 +1234,6 @@ section {
     font-size: 1.05rem;
 }
 
-.pricing-includes {
-    list-style: none;
-    margin: var(--spacing-md) 0;
-    text-align: left;
-}
-
-.pricing-includes li {
-    padding: 0.7rem 0;
-    border-bottom: 1px solid var(--blanc-casse);
-    color: #363333;
-    font-size: 1.05rem;
-    transition: all 0.3s ease;
-}
-
-.pricing-includes li:hover {
-    padding-left: 10px;
-    background: rgba(255, 105, 180, 0.03);
-}
-
-.pricing-includes li:last-child {
-    border-bottom: none;
-}
-
-.pricing-includes li::before {
-    content: '✓ ';
-    color: var(--rouge-vif);
-    font-weight: bold;
-    margin-right: 0.5rem;
-    display: inline-block;
-    animation: checkBounce 0.5s ease;
-}
-
-@keyframes checkBounce {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-}
 
 .pricing-guarantee {
     margin-top: var(--spacing-md);
