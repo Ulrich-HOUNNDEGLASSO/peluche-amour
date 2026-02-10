@@ -277,5 +277,3 @@ const sectionObserver = new IntersectionObserver(function(entries) {
 document.querySelectorAll('section').forEach(section => {
     sectionObserver.observe(section);
 });
-
-console.log('🎨 Site showcase activé - Parallaxe profond + Pluie d\'icônes Valentine actifs !');
