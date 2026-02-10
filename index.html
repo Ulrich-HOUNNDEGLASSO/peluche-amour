@@ -38,74 +38,8 @@
     <link rel="preload" href="Doudou coeur.webp" as="image" type="image/webp">
     <link rel="preload" href="Doudou coeur.png" as="image" type="image/png">
 
-    <!-- Critical CSS - Above the fold styles -->
-    <style>
-        /* RESET & BASE */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --rouge-vif: #FF0000; --rose-vif: #FF1493; --rose-doux: #FF69B4;
-            --rouge-passion: #DC143C; --blanc: #FFFFFF; --blanc-casse: #F5F5F5;
-            --font-title: 'Playfair Display', serif; --font-body: 'Lora', serif;
-            --spacing-xs: 0.5rem; --spacing-sm: 1rem; --spacing-md: 2rem;
-            --spacing-lg: 3rem; --spacing-xl: 5rem;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--font-body); font-size: 16px; line-height: 1.7;
-            color: #333; background: var(--blanc); overflow-x: hidden;
-        }
-        img { max-width: 100%; height: auto; display: block; }
-
-        /* HERO SECTION - Critical above-the-fold */
-        .hero {
-            min-height: 100vh; background: #0a0a0a; display: flex;
-            align-items: center; padding: 0;
-        }
-        .hero-container {
-            max-width: 1400px; width: 100%; margin: 0 auto; padding: 0 var(--spacing-md);
-            display: grid; grid-template-columns: 1fr; align-items: center;
-            gap: 0; position: relative; z-index: 10; min-height: 100vh;
-        }
-        .hero-plush { width: 100%; max-width: 600px; margin: 0 auto; position: relative; }
-        .plush-float { filter: drop-shadow(0 40px 80px rgba(255, 20, 147, 0.6)); }
-        .hero-content {
-            text-align: center; max-width: 800px; margin: 0 auto;
-            position: relative; padding: var(--spacing-lg) 0;
-        }
-        .hero-title {
-            font-size: clamp(2.5rem, 10vw, 7rem); margin-bottom: var(--spacing-md);
-            font-weight: 900; line-height: 0.9; letter-spacing: -0.04em;
-            background: linear-gradient(135deg, #FFFFFF 0%, var(--rose-vif) 50%, var(--blanc) 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; background-size: 200% 200%;
-        }
-        .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem); color: rgba(255, 255, 255, 0.9);
-            margin-bottom: var(--spacing-lg); font-weight: 500;
-        }
-        .cta-primary {
-            display: inline-block; padding: 1.8rem 4rem;
-            background: linear-gradient(135deg, var(--rouge-vif) 0%, var(--rouge-passion) 100%);
-            color: var(--blanc); text-decoration: none; font-family: var(--font-body);
-            font-size: 1.4rem; font-weight: 700; border-radius: 60px;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.6);
-            text-align: center; position: relative; overflow: hidden;
-            text-transform: uppercase; letter-spacing: 0.15em;
-        }
-
-        /* Mobile responsiveness for critical content */
-        @media (max-width: 768px) {
-            .hero-container { padding: 0 1rem; }
-            .hero-title { font-size: clamp(2rem, 12vw, 5rem); }
-            .hero-subtitle { font-size: 1.2rem; margin-bottom: 2rem; }
-            .cta-primary { padding: 1.2rem 2.5rem; font-size: 1.1rem; }
-        }
-    </style>
-
-    <!-- Load remaining CSS asynchronously -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <!-- Load CSS synchronously for better loading -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Preload script for better performance -->
     <link rel="preload" href="script.js" as="script">
@@ -131,11 +65,9 @@
                 </picture>
             </div>
             <div class="hero-content">
-                <h1 class="hero-title">Vous manquez de mots pour lui exprimer vos sentiments ? <br>
-                    Offrez Doucou Coeur, le cadeau parfait !!!
-                </h1>
+                <h1 class="hero-title">Quand les mots ne suffisent plus, Doudou Coeur prend le relais </h1>
                 <p class="hero-subtitle">Douceur infinie, amour sincère. Offrez plus qu'un cadeau, offrez une émotion.</p>
-                <a href="#offre" class="cta-primary">Offrir maintenant</a>
+                <a href="#offre" class="cta-primary">Offrir maintenant ↓ </a>
             </div>
         </div>
     </section>
@@ -144,8 +76,8 @@
     <section class="why-offer">
         <div class="container">
             <h2 class="section-title" data-text="Pourquoi offrir Doudou Cœur ?">Pourquoi offrir Doudou Cœur ?</h2>
-            <p class="section-intro">Parce que certains sentiments ne s'expriment pas avec des mots.</p>
-            
+            <p class="section-intro">Parce que certains sentiments ne s'expriment pas avec des mots. Dans un monde où les messages s'effacent et les appels se perdent, Doudou Cœur offre une présence constante et tangible. Chaque câlin avec cette peluche douce rappelle votre amour inconditionnel, sans jamais avoir besoin de le dire. C'est le cadeau parfait pour ceux qui préfèrent les gestes aux paroles, l'émotion pure à la superficialité.</p>
+
             <div class="reasons-grid">
                 <div class="reason-card">
                     <div class="reason-icon"><i class="fa-solid fa-heart"></i></div>
@@ -249,8 +181,7 @@
                 <p class="pricing-detail">Livraison offerte avant la Saint-Valentin</p>
                 
                 <!-- <ul class="pricing-includes">
-                    <li>Peluche Doudou Cœur (30cm)</li>
-                    <li>Emballage cadeau romantique</li>
+                    <li>Peluche Doudou Cœur</li>
                     <li>Carte message personnalisable</li>
                     <li>Livraison express gratuite</li>
                 </ul> -->
@@ -336,6 +267,55 @@
                 
                 <a href="#" class="cta-primary cta-large cta-pulse">Offrir Doudou Cœur maintenant</a>
             </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: FORMULAIRE DE COMMANDE -->
+    <section class="order-form" id="commande">
+        <div class="container">
+            <h2 class="section-title" data-text="Commander Doudou Cœur">Commander Doudou Cœur</h2>
+            <p class="section-intro">Remplissez ce formulaire pour recevoir votre Doudou Cœur avant la Saint-Valentin.</p>
+
+            <form class="order-form-grid" action="#" method="post">
+                <div class="form-group">
+                    <label for="nom">Nom complet *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Adresse de livraison *</label>
+                    <textarea id="adresse" name="adresse" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ville">Ville *</label>
+                    <input type="text" id="ville" name="ville" required>
+                </div>
+                <div class="form-group">
+                    <label for="code-postal">Code postal *</label>
+                    <input type="text" id="code-postal" name="code-postal" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Message personnalisé (optionnel)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Ajoutez un message qui sera inclus avec votre commande..."></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cgv" required>
+                        J'accepte les <a href="#" target="_blank">conditions générales de vente</a> *
+                    </label>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="cta-primary cta-large">Confirmer ma commande</button>
+                    <p class="form-note">Paiement à la livraison · Livraison garantie avant le 14 février</p>
+                </div>
+            </form>
         </div>
     </section>
 
