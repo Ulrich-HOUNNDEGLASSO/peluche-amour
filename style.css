@@ -1571,6 +1571,10 @@ section {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
+    .pricing-badge img {
+        width: 50px; /* Reduce size to prevent overlap */
+    }
+
     .pricing-amount {
         flex-direction: column;
         gap: 0.5rem;
@@ -1579,6 +1583,22 @@ section {
 
     .price-current {
         font-size: 3rem;
+    }
+
+    .features-list {
+        margin-left: 0; /* Center the list */
+        text-align: center;
+    }
+
+    .feature-check {
+        font-size: 1rem; /* Reduce size for mobile */
+        margin-right: 0.5rem; /* Add spacing */
+        vertical-align: middle;
+    }
+
+    .feature-item {
+        gap: 0.5rem; /* Reduce gap for mobile */
+        justify-content: center; /* Center the items */
     }
 
     .final-cta-content {
