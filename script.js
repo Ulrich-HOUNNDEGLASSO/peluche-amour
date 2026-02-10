@@ -209,22 +209,7 @@ document.querySelectorAll('.reason-card, .benefit-card, .testimonial-card, .pric
     observer.observe(card);
 });
 
-// ========================================
-// EFFET MAGNÉTIQUE SUR LES BOUTONS
-// ========================================
-document.querySelectorAll('.cta-primary').forEach(button => {
-    button.addEventListener('mousemove', function(e) {
-        const rect = button.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        
-        button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.05)`;
-    });
-    
-    button.addEventListener('mouseleave', function() {
-        button.style.transform = 'translate(0, 0) scale(1)';
-    });
-});
+
 
 // ========================================
 // HOVER 3D SUR LES CARTES - Avec rotation 3D
